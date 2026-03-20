@@ -64,14 +64,12 @@ class LinkedList:
             result.append(current.value)
             current = current.next
         return result
-
-# Instantiate nodes and linked lists
-node1 = 10 # Realised that I don't need to create Node instances directly, as the LinkedList's append method creates them. So I can just use values directly.
-node2 = 20 # This solved the issue of trying to append Node instances, which resulted in showing the memory addresses instead of the values.
+# Error fix. Didnt require the explicit node instantiation for the linked list!
+# Instantiate linked lists
 linked_list = LinkedList()
-linked_list.append(node1)
+linked_list.append(10)
 print(linked_list.get_list()) # Print for verification, should print [10]
-linked_list.append(node2)
+linked_list.append(20)
 print(linked_list.get_list())  # Should print [10, 20]
 
 # Use LinkedList methods
